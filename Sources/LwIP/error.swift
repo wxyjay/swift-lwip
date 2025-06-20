@@ -20,7 +20,7 @@ public enum LwIPError: Int, Error {
 }
 
 extension err_t {
-    func `throw`() throws {
+    public func `throw`() throws {
         if let error = self.error {
             throw error
         }
