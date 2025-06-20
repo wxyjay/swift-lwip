@@ -242,7 +242,7 @@ public final class TCPConnection: TCPBase {
 
     /// Create a connection with an existing pcb
     /// - Parameter pcb:
-    override init(pcb: UnsafeMutablePointer<tcp_pcb>) {
+    public override init(pcb: UnsafeMutablePointer<tcp_pcb>) {
         assertCoreLocked()
         super.init(pcb: pcb)
     }
