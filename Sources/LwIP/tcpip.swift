@@ -22,7 +22,7 @@ func assertCoreLocked() {
     sys_check_core_locking()
 }
 
-func tcpip<Result>(perform block: () throws -> Result ) rethrows -> Result {
+public func tcpip<Result>(perform block: () throws -> Result ) rethrows -> Result {
     sys_lock_tcpip_core()
     defer {
         sys_unlock_tcpip_core()
